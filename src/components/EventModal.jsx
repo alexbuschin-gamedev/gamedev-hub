@@ -10,7 +10,7 @@ export default function EventModal({ event, date, onClose, onSave }) {
   const [form, setForm] = useState({
     title: '',
     description: '',
-    date: date ? date.toISOString().split('T')[0] : new Date().toISOString().split('T')[0],
+    date: date ? `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}` : `${new Date().getFullYear()}-${String(new Date().getMonth()+1).padStart(2,'0')}-${String(new Date().getDate()).padStart(2,'0')}`,
     time: '10:00',
     tag: 'general',
     status: isGuest ? 'pending' : 'confirmed',

@@ -116,7 +116,7 @@ export default function Calendar() {
   const days = eachDayOfInterval({ start: calStart, end: calEnd })
 
   function eventsOn(day) {
-    return events.filter(e => isSameDay(parseISO(e.date), day))
+    return events.filter(e => { const d = e.date; const [y,m,day2] = d.split('-').map(Number); return day.getFullYear()===y && day.getMonth()+1===m && day.getDate()===day2 })
   }
 
   function handleDayClick(day) { setSelected(day); setEditEvent(null) }
