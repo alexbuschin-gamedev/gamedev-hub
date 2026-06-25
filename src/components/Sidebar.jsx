@@ -8,6 +8,7 @@ const NAV = [
   { to: '/calendar', icon: '◷', label: 'Kalender' },
   { to: '/roadmap', icon: '◈', label: 'Roadmap' },
   { to: '/members', icon: '◉', label: 'Team' },
+  { to: '/wiki', icon: '📖', label: 'Wiki' },
   { to: '/assistant', icon: '🤖', label: 'KI-Assistent' },
 ]
 

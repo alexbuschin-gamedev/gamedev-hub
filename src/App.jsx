@@ -8,6 +8,7 @@ import Roadmap from './pages/Roadmap'
 import Members from './pages/Members'
 import Admin from './pages/Admin'
 import AIAssistant from './pages/AIAssistant'
+import Wiki from './pages/Wiki'
 
 function Protected({ children }) {
   const { user, loading } = useAuth()
@@ -31,6 +32,7 @@ export default function App() {
           <Route path="/roadmap" element={<Protected><Roadmap /></Protected>} />
           <Route path="/members" element={<Protected><Members /></Protected>} />
           <Route path="/admin" element={<Protected><Admin /></Protected>} />
+          <Route path="/wiki" element={<Protected><Wiki /></Protected>} />
           <Route path="/assistant" element={<Protected><AIAssistant /></Protected>} />
           <Route path="*" element={<Navigate to="/dashboard" replace />} />
         </Routes>
